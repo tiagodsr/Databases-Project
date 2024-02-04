@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Distritos</h1>
+<table>
+  <tr>
+    <th>
+      <b>Codigo</b>
+    </th>
+    <th>
+      <b>Nome</b>
+    </th>
+  </tr>
+
+  {% for d in distrito %}
+  <tr>
+    <td>
+      <a href="/distrito/{{ d.CODIGO }}">{{d.CODIGO }}</a>
+    </td>
+    <td>
+      {{ d.NOME }}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Ranking nacional do Exame de {{ disciplina.Nome }} </h1>
+  <table>
+    <tr>
+      <th><b>Rank</b></th>
+      <th><b>Escola</b></th>
+      <th><b>Média</b></th>
+    </tr>
+    {% for r in ranking %}
+      <tr>
+        <td>
+          {{r.Rank}}
+        </td>
+        <td>
+            <a href="/escola/{{ r.idEscola }}">{{ r.nomeEscola }}</a>
+        </td>
+        <td>
+          {{r.Media}}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

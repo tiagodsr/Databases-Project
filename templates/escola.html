@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{escola.Nome}}</h1>
+<p>
+  <b>EscolaId: </b>{{ escola.IDEscola }}
+</p>
+<p>
+  <b>Nome: </b>{{ escola.Nome }}
+</p>
+<p>
+  <b>Tipo: </b>{{ escola.Tipo }}
+</p>
+<p>
+  <b>Distrito: </b>
+  {% for d in distrito %}
+      <a href="/distrito/{{ d.CODIGO }}">{{ d.NOME }}</a>
+    {% endfor %}
+</p>
+<p>
+  <b>Concelho: </b>
+  {% for c in concelho %}
+    <a href="/concelho/{{ c.CODIGO }}">{{ c.NOME }}</a>
+  {% endfor %}
+</p>
+{% endblock %}

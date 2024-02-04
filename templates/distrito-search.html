@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Distrito search</h1>
+<p><b>Search expression:</b>"{{ search.expr }}"</p>
+<p>
+<ul>
+  {% for d in distrito %}
+  <li><a href="/distrito/{{ d.CODIGO }}">{{ d.NOME }}</a></li>
+  {% endfor %}
+</ul>
+</p>
+{% endblock %}

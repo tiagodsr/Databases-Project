@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>RankingExames database</h1>
+
+<h2>About</h2>
+<p>This web application illustrates the use of the RankingExames
+database. The application is built using 
+<a href="https://docs.python.org/3/library/sqlite3.html">sqlite3</a>,
+<a href="https://flask.palletsprojects.com">Flask</a>, and
+<a href="https://jinja.palletsprojects.com">Jinja</a>.
+</p>
+
+<h2>Some database statistics</h2>
+<table>
+<tr>
+  <th>Items</th>
+  <th>Count</th>
+</tr>
+<tr>
+  <td>Concelhos</td>
+  <td>{{ stats.n_concelhos }}</td>
+</tr>
+<tr>
+  <td>Disciplinas</td>
+  <td>{{ stats.n_disciplinas }}</td>
+</tr>
+<tr>
+  <td>Distritos</td>
+  <td>{{ stats.n_distritos }}</td>
+</tr>
+<tr>
+  <td>Escolas</td>
+  <td>{{ stats.n_escolas }}</td>
+</tr>
+</table>
+
+<h3>Distritos</h3>
+<p>
+   <a href="/distrito">List all</a>
+</p>
+<p>Get Distrito info:
+<form name="did" action="javascript:window.open('/distrito/'+document.forms['did'].elements['id'].value,'_self')">
+   Distrito Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+  
+<p>Search by name:
+<form name="msearch" action="javascript:window.open('/distrito/search/'+document.forms['msearch'].elements['expr'].value,'_self')">
+  <input name="expr" id="expr" value="Lisboa" required/>
+  <input type="submit" value="search"/>
+</form>
+</p>
+
+<h3>Concelhos</h3>
+<p>
+   <a href="/concelho">List all</a>
+</p>
+<p>Get Concelho info:
+<form name="mid" action="javascript:window.open('/concelho/'+document.forms['mid'].elements['id'].value,'_self')">
+   Concelho Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+  
+<p>Search by name:
+<form name="csearch" action="javascript:window.open('/concelho/search/'+document.forms['csearch'].elements['expr'].value,'_self')">
+  <input name="expr" id="expr" value="Porto" required/>
+  <input type="submit" value="search"/>
+</form>
+</p>
+
+<h3>Escolas</h3>
+<p>
+   <a href="/escola">List all</a>
+</p>
+<p>Get School info:
+<form name="aid" action="javascript:window.open('/escola/'+document.forms['aid'].elements['id'].value,'_self')">
+   School ID:<input value="123" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+  
+<p>Search by name:
+  <form name="asearch" action="javascript:window.open('/escola/search/'+document.forms['asearch'].elements['expr'].value,'_self')">
+    <input name="expr" id="expr" value="Escola" required/>
+    <input type="submit" value="search"/>
+  </form>
+</p>
+
+<h3>Disciplinas & Ranking por Disciplina</h3>
+<p>
+   <a href="/disciplina">List all</a>
+</p>
+
+<p>Get information about the ranking by DisciplinaId:
+<form name="gid" action="javascript:window.open('/disciplina/'+document.forms['gid'].elements['id'].value,'_self')">
+   DisciplinaId:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+
+{% endblock %}

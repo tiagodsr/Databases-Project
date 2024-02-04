@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{distrito.NOME}}</h1>
+<p>
+  <b>DistritoID: </b>{{ distrito.CODIGO }}
+</p>
+<p>
+    <b>Concelhos: </b>
+  <ul>
+    {% for c in concelho %}
+    <li>
+      <a href="/concelho/{{ c.CODIGO }}">{{ c.NOME }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  </p>
+
+{% endblock %}
