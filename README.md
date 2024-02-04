@@ -1,9 +1,9 @@
 
 # Sumário
 
-[Eduardo R. B. Marques](https://www.dcc.fc.up.pt/~edrdo/), DCC/FCUP
+Tiago da Silva Rodrigues, DCC/FCUP
 
-Aplicação Python demonstrando o acesso à BD MovieStream
+Aplicação Python demonstrando o acesso à BD RankingExames
 
 #  Referência
 
@@ -33,7 +33,7 @@ pip3 install --user Flask
 # Execução
 
 Inicie a aplicação executando `python3 server.py` e interaja com a mesma
-abrindo uma janela no seu browser  com o endereço [__http://localhost:9001/__](http://localhost:9001/) 
+abrindo uma janela no seu browser  com o endereço [__http://localhost:9001/__](http://localhost:9002/) 
 
 ```
 $ python3 server.py
