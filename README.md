@@ -1,7 +1,9 @@
 
-# Sumário
+# Bases de Dados 2023/2024
 
 Tiago da Silva Rodrigues, DCC/FCUP
+
+Este projeto foi desenvolvido no âmbito da Unidade Curricular Bases de Dados, durante o ano letivo 2023/2024, na Faculdade de Ciências da Universidade do Porto
 
 Aplicação Python demonstrando o acesso à BD RankingExames
 
